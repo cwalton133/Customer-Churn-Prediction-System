@@ -58,7 +58,8 @@ print("\n🔥 Top 10 Important Features:")
 print(top_features)
 
 # Save feature importance
-top_features.to_csv("data/processed/feature_importance.csv")
+#top_features.to_csv("data/processed/feature_importance.csv")
+top_features.to_csv("data/processed/feature_importance.csv", header=True)
 
 # -------------------------------
 # 7. Save Model
