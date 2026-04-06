@@ -6,9 +6,14 @@
 
 ## 🪄 Introduction
 
-This project focuses on predicting customer churn using machine learning and advanced analytics techniques. It covers the full data lifecycle — from messy raw data to executive-level dashboards and business insights.
+This project delivers a complete **end-to-end churn prediction system**, transforming messy customer data into actionable insights, predictive models, and executive dashboards.
 
-The analysis simulates a real-world business scenario in a **Retail Banking / Subscription-based environment**, demonstrating how data analytics drives retention strategies, revenue protection, and decision-making at the executive level.
+It simulates a real-world **subscription / financial services scenario**, demonstrating how analytics can:
+
+- Predict customer churn
+- Identify revenue risk
+- Enable proactive retention strategies
+- Support executive decision-making
 
 ---
 
@@ -22,47 +27,49 @@ The analysis simulates a real-world business scenario in a **Retail Banking / Su
 
 ## 🧭 Business Context
 
-Customer churn is one of the most critical challenges for subscription-based and financial service businesses.
+Customer churn directly impacts **revenue, growth, and customer lifetime value (CLV)**.
 
-Organizations face increasing pressure to:
+Organizations must:
 
-- Reduce customer attrition
-- Identify high-risk churn segments early
-- Protect recurring revenue streams
-- Improve customer lifetime value (CLV)
-- Enable data-driven retention strategies
+- Detect churn risk early
+- Understand why customers leave
+- Protect high-value segments
+- Optimize retention strategies
 
-This project simulates how an organization can leverage data to **proactively predict churn and take action before revenue is lost**.
+This project demonstrates how data can be leveraged to **move from reactive to proactive decision-making**.
 
 ---
 
 ## 🎯 Purpose of the Project
 
-The goal of this project is to build an **end-to-end churn prediction system** that:
+To build a **scalable analytics system** that:
 
-- Identifies customers likely to churn
-- Quantifies revenue at risk
-- Segments customers based on value and behavior
-- Provides actionable insights through dashboards
+- Predicts churn probability
+- Identifies key churn drivers
+- Quantifies **Revenue at Risk**
+- Segments customers for targeted retention
+- Provides a **Power BI dashboard for executives**
 
 ---
 
 ## 📈 Expected Outcomes
 
-- A **machine learning model** predicting churn risk
-- Identification of **key churn drivers**
-- Revenue impact analysis (Revenue at Risk)
-- A **Power BI dashboard** for executive decision-making
-- A scalable analytics pipeline for real-world applications
+- Predictive churn model (Machine Learning)
+- Business-ready KPIs and metrics
+- Insight-driven dashboard
+- Data pipeline (clean → transform → model)
+- Portfolio-ready project demonstrating real-world skills
 
 ---
 
 ## ⚠️ Disclaimer
 
-This dataset is used strictly for **learning and portfolio purposes**.
+This dataset is used strictly for:
 
-- It does not represent real customer data
-- All scenarios are simulated or anonymized
+- Learning
+- Portfolio demonstration
+
+It does not represent real customer data.
 
 ---
 
@@ -70,11 +77,10 @@ This dataset is used strictly for **learning and portfolio purposes**.
 
 - [Project Overview](#-project-overview)
 - [Dataset Description](#-dataset-description)
-- [Methodology (CRISP-DM)](#-methodology-crisp-dm)
 - [Data Pipeline](#-data-pipeline)
 - [Machine Learning Model](#-machine-learning-model)
 - [Power BI Dashboard](#-power-bi-dashboard)
-- [Key KPIs & Metrics](#-key-kpis--metrics)
+- [Key KPIs](#-key-kpis)
 - [Key Insights](#-key-insights)
 - [Strategic Recommendations](#-strategic-recommendations)
 - [Tools & Technologies](#-tools--technologies)
@@ -91,164 +97,162 @@ This project demonstrates how raw customer data can be transformed into:
 - Business insights
 - Executive dashboards
 
-The focus is on **business impact**, not just model performance.
+The focus is on **business impact, not just model accuracy**.
 
 ---
 
 ## 🗂️ Dataset Description
 
-The dataset includes customer-level information such as:
+The dataset includes:
 
-- **CustomerID** – Unique identifier
-- **Demographics** – Gender, Dependents, Partner
-- **Account Info** – Tenure, Contract Type, Payment Method
-- **Services** – Internet, Phone, Streaming services
-- **Financials** – Monthly Charges, Total Charges
-- **Target Variable** – Churn (Yes/No)
-
----
-
-📄 **Dataset Location:**  
-👉 `data/raw/messy_churn.csv`
+- Customer demographics
+- Account details
+- Service usage
+- Financial data
+- Churn status
 
 ---
 
-## 🔍 Methodology (CRISP-DM)
+## 📄 Data Sources
 
-This project follows the **CRISP-DM framework**:
+### 🔹 Raw Data
+👉 [messy_churn.csv](data/raw/messy_churn.csv)
 
-1. Business Understanding – Define churn problem
-2. Data Understanding – Explore patterns & anomalies
-3. Data Preparation – Clean and structure messy data
-4. Feature Engineering – Create meaningful business features
-5. Modeling – Train churn prediction model
-6. Evaluation – Validate model performance
-7. Deployment – Dashboard & reporting
+### 🔹 Processed Data
+- 👉 [cleaned_churn.csv](data/processed/cleaned_churn.csv)  
+- 👉 [featured_churn.csv](data/processed/featured_churn.csv)  
+- 👉 [feature_importance.csv](data/processed/feature_importance.csv)
 
 ---
 
 ## ⚙️ Data Pipeline
 
-### 🔹 Step 1: Data Cleaning (`data_cleaning.py`)
+### 🔹 Data Cleaning
 - Removed duplicates
 - Handled missing values
 - Fixed inconsistent categories
 - Created:
   - `has_internet`
   - `has_phone`
-- Standardized service columns
 
 ---
 
-### 🔹 Step 2: Feature Engineering (`feature_engineering.py`)
-- Created:
-  - Customer Lifetime Value (CLV)
-  - Average Revenue
-  - High Value Customers
-  - Loyal Customers
+### 🔹 Feature Engineering
+- Customer Lifetime Value (CLV)
+- Average Revenue
+- High Value Customers
+- Loyal Customers
 
 ---
 
-### 🔹 Step 3: Model Training (`train_model.py`)
-- Model: Random Forest Classifier
-- Train/Test Split: 80/20
-- Evaluation:
-  - Accuracy
-  - Classification Report
-- Extracted Feature Importance
+### 🔹 Model Training
+- Random Forest Classifier
+- Feature importance extraction
+- Model saved for reuse (`model.pkl`)
 
 ---
 
 ## 🤖 Machine Learning Model
 
-The model predicts customer churn and identifies key drivers such as:
+The model predicts churn and identifies key drivers such as:
 
 - Contract type
 - Tenure
 - Monthly charges
-- Customer value segment
+- Customer segmentation
 
 ---
 
 ## 📊 Power BI Dashboard
 
-> 📸 **Dashboard Preview Placeholder**  
-> _Insert screenshot here_  
-> **Suggested path:** `/dashboard/churn_dashboard.png`
+### 🖥️ Dashboard Overview
 
-The dashboard includes:
+#### 📸 Dashboard View 1
+![Dashboard 1](dashboard/dashboard_1.png)
+
+#### 📸 Dashboard View 2
+![Dashboard 2](dashboard/dashboard_2.png)
+
+---
+
+### Dashboard Features
 
 - KPI Cards:
   - Total Customers
   - Churn Rate
   - Revenue at Risk
-- Churn Drivers:
+- Churn Analysis:
   - Contract Type
   - Tenure Groups
 - Customer Segmentation
-- High-Risk Customer Table
+- High-Risk Customers Table
 - Interactive Filters
 
 ---
 
-## 📌 Key KPIs & Metrics
+## 📌 Key KPIs
 
 - Churn Rate
 - Revenue at Risk
 - Customer Lifetime Value (CLV)
 - Average Monthly Charges
-- High-Value Customer Ratio
+- Customer Segmentation Metrics
 
 ---
 
 ## 💡 Key Insights
 
-- Month-to-month customers show the highest churn rate
-- Customers with low tenure are more likely to churn
-- High-value but non-loyal customers pose the highest revenue risk
-- Service usage impacts retention significantly
+- Month-to-month contracts have the highest churn
+- Low-tenure customers are most at risk
+- High-value but non-loyal customers drive revenue loss
+- Service usage patterns influence retention
 
 ---
 
 ## 🧠 Strategic Recommendations
 
-1. Target **high-value, low-tenure customers** with retention offers  
-2. Incentivize **long-term contracts**  
-3. Improve onboarding experience for new customers  
-4. Use segmentation for personalized retention strategies  
-5. Monitor churn drivers continuously via dashboard  
+1. Target high-value, low-tenure customers  
+2. Promote long-term contracts  
+3. Improve onboarding experience  
+4. Personalize retention strategies  
+5. Monitor churn drivers continuously  
 
 ---
 
 ## 🧰 Tools & Technologies
 
 - Python (Pandas, NumPy, Scikit-learn)
-- SQL (conceptual workflow)
-- Power BI (dashboard & storytelling)
-- VS Code / Jupyter Notebook
+- Power BI
+- SQL (conceptual)
+- VS Code / Jupyter
 - Git & GitHub
 
 ---
 
 ## 🏁 Conclusion
 
-This project demonstrates how combining **data engineering, machine learning, and business intelligence** can create a powerful system for predicting churn and driving strategic decisions.
+This project demonstrates how combining:
 
-It reflects real-world analytics workflows used in consulting, banking, and SaaS environments.
+- Data Engineering
+- Machine Learning
+- Business Intelligence
+
+can create a powerful system for predicting churn and enabling **data-driven decision-making**.
 
 ---
 
-## 📁 GitHub Repository Structure
+## 📁 Project Structure
 
 ```text
 churn_prediction_project/
 │
 ├── data/
 │   ├── raw/
+│   │   └── messy_churn.csv
 │   ├── processed/
-│
-├── notebooks/
-│   └── exploration.ipynb
+│       ├── cleaned_churn.csv
+│       ├── featured_churn.csv
+│       ├── feature_importance.csv
 │
 ├── src/
 │   ├── data_cleaning.py
@@ -256,8 +260,9 @@ churn_prediction_project/
 │   ├── train_model.py
 │
 ├── dashboard/
+│   ├── dashboard_1.png
+│   ├── dashboard_2.png
 │   └── churn_dashboard.pbix
 │
 ├── model.pkl
-├── requirements.txt
 └── README.md
