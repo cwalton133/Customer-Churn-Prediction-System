@@ -1,67 +1,68 @@
-# 🎬 Customer Churn Prediction System (End-to-End Analytics)
+# 🎯 Customer Churn Prediction System (End-to-End Analytics)
 
-## 🏬 Microsoft Excel & Power Tools Analytics Project
+## 📊 Python, Machine Learning & Power BI Analytics Project
 
 ---
 
 ## 🪄 Introduction
 
-This project aims to predict customer churn using machine learning techniques.
-It includes data cleaning, feature engineering, model training, and deployment.
+This project focuses on predicting customer churn using machine learning and advanced analytics techniques. It covers the full data lifecycle — from messy raw data to executive-level dashboards and business insights.
 
-The analysis simulates a real-world business scenario at **StreamWave Entertainment**, demonstrating how data analytics supports executive-level decisions in the Media & Entertainment industry.
+The analysis simulates a real-world business scenario in a **Retail Banking / Subscription-based environment**, demonstrating how data analytics drives retention strategies, revenue protection, and decision-making at the executive level.
 
 ---
 
 ## 📊 Badges
 
-![GitHub repo size](https://img.shields.io/github/repo-size/cwalton133/utilizing-viewers-engagement-for-strategic-content-investment-media-entertainment)
-![License](https://img.shields.io/github/license/cwalton133/utilizing-viewers-engagement-for-strategic-content-investment-media-entertainment)
-![GitHub top language](https://img.shields.io/github/languages/top/cwalton133/utilizing-viewers-engagement-for-strategic-content-investment-media-entertainment)
+![GitHub repo size](https://img.shields.io/github/repo-size/cwalton133/customer-churn-prediction-system)
+![License](https://img.shields.io/github/license/cwalton133/customer-churn-prediction-system)
+![GitHub top language](https://img.shields.io/github/languages/top/cwalton133/customer-churn-prediction-system)
 
 ---
 
 ## 🧭 Business Context
 
-**StreamWave Entertainment** is a global streaming platform with over **150 million subscribers** across 190+ countries. As competition intensifies and content production costs rise, leadership faces increasing pressure to:
+Customer churn is one of the most critical challenges for subscription-based and financial service businesses.
 
-- Allocate limited budgets effectively
-- Reduce subscriber churn
-- Prioritize high-ROI content genres
-- Maintain competitive differentiation through data-driven insights
+Organizations face increasing pressure to:
 
-Despite a vast content library, not all genres contribute equally to engagement and retention—making analytics critical to investment strategy.
+- Reduce customer attrition
+- Identify high-risk churn segments early
+- Protect recurring revenue streams
+- Improve customer lifetime value (CLV)
+- Enable data-driven retention strategies
+
+This project simulates how an organization can leverage data to **proactively predict churn and take action before revenue is lost**.
 
 ---
 
 ## 🎯 Purpose of the Project
 
-The primary goal of this project is to **identify top-performing content genres** that drive:
+The goal of this project is to build an **end-to-end churn prediction system** that:
 
-- Viewer engagement quality (completion & repeat viewing)
-- Subscriber retention and renewal
-- Efficient allocation of marketing and production spend
-
-Using **Excel-based analytics**, the project translates raw viewing logs into executive-ready insights.
+- Identifies customers likely to churn
+- Quantifies revenue at risk
+- Segments customers based on value and behavior
+- Provides actionable insights through dashboards
 
 ---
 
 ## 📈 Expected Outcomes
 
-- A **data-driven framework** for content investment decisions
-- Identification of **high-ROI genres**
-- Reduced churn through better-aligned content strategy
-- Improved personalization and recommendation logic
-- Executive dashboards for rapid decision-making
+- A **machine learning model** predicting churn risk
+- Identification of **key churn drivers**
+- Revenue impact analysis (Revenue at Risk)
+- A **Power BI dashboard** for executive decision-making
+- A scalable analytics pipeline for real-world applications
 
 ---
 
 ## ⚠️ Disclaimer
 
-This dataset is used **strictly for learning and portfolio demonstration purposes**.
+This dataset is used strictly for **learning and portfolio purposes**.
 
-- It does **not represent real StreamWave data**
-- All entities, metrics, and scenarios are fictional or anonymized
+- It does not represent real customer data
+- All scenarios are simulated or anonymized
 
 ---
 
@@ -70,10 +71,10 @@ This dataset is used **strictly for learning and portfolio demonstration purpose
 - [Project Overview](#-project-overview)
 - [Dataset Description](#-dataset-description)
 - [Methodology (CRISP-DM)](#-methodology-crisp-dm)
-- [Week 1: Analytics Foundation](#-week-1-analytics-foundation)
-- [Week 2: Dashboard & Storytelling](#-week-2-dashboard--storytelling)
+- [Data Pipeline](#-data-pipeline)
+- [Machine Learning Model](#-machine-learning-model)
+- [Power BI Dashboard](#-power-bi-dashboard)
 - [Key KPIs & Metrics](#-key-kpis--metrics)
-- [Executive Dashboard](#-executive-dashboard)
 - [Key Insights](#-key-insights)
 - [Strategic Recommendations](#-strategic-recommendations)
 - [Tools & Technologies](#-tools--technologies)
@@ -84,222 +85,167 @@ This dataset is used **strictly for learning and portfolio demonstration purpose
 
 ## 🧭 Project Overview
 
-This project demonstrates how **viewer behavior data** can be transformed into strategic insights that inform:
+This project demonstrates how raw customer data can be transformed into:
 
-- Content acquisition & production
-- Genre-level investment prioritization
-- Marketing optimization
-- Retention-focused decision-making
+- Predictive intelligence
+- Business insights
+- Executive dashboards
 
-The analysis emphasizes **business impact**, not just metrics.
+The focus is on **business impact**, not just model performance.
 
 ---
 
 ## 🗂️ Dataset Description
 
-The dataset captures simulated streaming activity and includes:
+The dataset includes customer-level information such as:
 
-- **User_ID** – Unique subscriber identifier
-- **Demographics** – Age, Gender
-- **Subscription Data** – Tier, Status, Renewal
-- **Content Attributes** – Title, Genre, Duration, Release Year
-- **Viewing Behavior** – Watch Duration, Completion Flag, Watch Date
-
-This structure supports engagement, retention, and churn analysis.
-
----
-📄 **Download Raw Dataset:**  
-👉 [streamwave_viewing_logs.csv](data/raw/streamwave_viewing_logs.csv)
+- **CustomerID** – Unique identifier
+- **Demographics** – Gender, Dependents, Partner
+- **Account Info** – Tenure, Contract Type, Payment Method
+- **Services** – Internet, Phone, Streaming services
+- **Financials** – Monthly Charges, Total Charges
+- **Target Variable** – Churn (Yes/No)
 
 ---
+
+📄 **Dataset Location:**  
+👉 `data/raw/messy_churn.csv`
+
+---
+
 ## 🔍 Methodology (CRISP-DM)
 
 This project follows the **CRISP-DM framework**:
 
-1. **Business Understanding** – Define retention and ROI challenges
-2. **Data Understanding** – Explore structure, patterns, anomalies
-3. **Data Preparation** – Clean, validate, enrich datasets
-4. **Modeling** – Pivot tables and calculated metrics
-5. **Evaluation** – Validate insights against business goals
-6. **Deployment** – Dashboards and executive presentation
+1. Business Understanding – Define churn problem
+2. Data Understanding – Explore patterns & anomalies
+3. Data Preparation – Clean and structure messy data
+4. Feature Engineering – Create meaningful business features
+5. Modeling – Train churn prediction model
+6. Evaluation – Validate model performance
+7. Deployment – Dashboard & reporting
 
 ---
 
-## 🧹 Week 1: Analytics Foundation
+## ⚙️ Data Pipeline
 
-### Day 1 – Project Kickoff & Data Orientation
-- Defined business problem and success metrics
-- Identified key analytical questions
-- Established KPIs aligned to engagement & retention
-
-### Day 2 – Data Ingestion & Quality Assessment
-- Imported CSV files into Excel
-- Enforced data types
-- Validated row counts, uniqueness, nulls, and outliers
-- Logged data quality issues and remediation plan
-
-### Day 3 – KPI Calculation
-- Built pivot tables by genre
-- Calculated:
-  - Completion Rate
-  - Repeat Viewer Rate
-  - Average Watch Duration
-  - Concurrent Viewers
-  
-![KPI Calculation](dashboard/genre_charts.png)
-
-
-### Day 4 – Retention Analysis
-- Cross-tabulated Genre vs Renewal_Status
-- Ranked genres by composite engagement score
-- Identified churn-resistant content categories
-
-### Day 5 – Interpretation & Insights
-- Translated metrics into executive insights
-- Defined where to invest, optimize, or deprioritize
+### 🔹 Step 1: Data Cleaning (`data_cleaning.py`)
+- Removed duplicates
+- Handled missing values
+- Fixed inconsistent categories
+- Created:
+  - `has_internet`
+  - `has_phone`
+- Standardized service columns
 
 ---
 
-## 📊 Week 2: Dashboard & Storytelling
+### 🔹 Step 2: Feature Engineering (`feature_engineering.py`)
+- Created:
+  - Customer Lifetime Value (CLV)
+  - Average Revenue
+  - High Value Customers
+  - Loyal Customers
 
-> 📸 **Screenshot Placeholder – Dashboard Wireframe**  
-> _Insert Excalidraw wireframe illustrating dashboard layout and information hierarchy._  
-> **Filename suggestion:** `/dashboard/dashboard_wireframe.png`
+---
 
-### Day 1 – Dashboard Wireframing
-- Designed layout using Excalidraw
-- Defined visual hierarchy for executives
+### 🔹 Step 3: Model Training (`train_model.py`)
+- Model: Random Forest Classifier
+- Train/Test Split: 80/20
+- Evaluation:
+  - Accuracy
+  - Classification Report
+- Extracted Feature Importance
 
-> 📸 **Screenshot Placeholder – Chart Design Samples**  
-> _![Dashboard Wireframe](dashboard/dashboard_wireframe.png)
+---
 
+## 🤖 Machine Learning Model
 
-### Day 2 – Chart Building
-- Built bar, line, and KPI tile visuals
-- Applied executive formatting & labeling standards
-- Added slicers for interactivity
+The model predicts customer churn and identifies key drivers such as:
 
-> 📸 **Screenshot Placeholder – One-Page Dashboard**  
-> 
-> **![Executive Dashboard](dashboard/streamwave_executive_dashboard.png)
+- Contract type
+- Tenure
+- Monthly charges
+- Customer value segment
 
+---
 
-### Day 3 – One-Page Executive Dashboard
-- KPI Tiles: Completion %, Renewal %
-- Top 5 Genre Performance
-- Monthly Engagement Trends
+## 📊 Power BI Dashboard
 
-### Day 5 – Executive Presentation
-- Converted dashboard insights into C-suite storytelling
-- Delivered recommendations backed by data
+> 📸 **Dashboard Preview Placeholder**  
+> _Insert screenshot here_  
+> **Suggested path:** `/dashboard/churn_dashboard.png`
 
+The dashboard includes:
 
-### Day 1 – Dashboard Wireframing
-- Designed layout using Excalidraw
-- Defined visual hierarchy for executives
-
-### Day 2 – Chart Building
-- Built bar, line, and KPI tile visuals
-- Applied executive formatting & labeling standards
-- Added slicers for interactivity
-
-### Day 3 – One-Page Executive Dashboard
-- KPI Tiles: Completion %, Renewal %
-- Top 5 Genre Performance
-- Monthly Engagement Trends
-
-### Day 5 – Executive Presentation
-- Converted dashboard insights into C-suite storytelling
-- Delivered recommendations backed by data
+- KPI Cards:
+  - Total Customers
+  - Churn Rate
+  - Revenue at Risk
+- Churn Drivers:
+  - Contract Type
+  - Tenure Groups
+- Customer Segmentation
+- High-Risk Customer Table
+- Interactive Filters
 
 ---
 
 ## 📌 Key KPIs & Metrics
 
-- **Completion Rate**
-- **Repeat Viewer Rate**
-- **Average Watch Duration**
-- **Renewal Rate / Retention Lift**
-- **Concurrent Viewers**
-
-These KPIs directly support ROI-driven content decisions.
-
----
-
-## 📈 Executive Dashboard
-
-> 📸 **Screenshot Placeholder – Executive Dashboard**  
-> 
-> ** ![Executive Dashboard](dashboard/streamwave_executive_dashboard.png)
-
-
-## 📈 Download C-Suite Presentation:
-
-> 📸 **Screenshot Placeholder – C-Suite Presentation**  
-> **👉 [StreamWave_CSuite_Content_Strategy.pptx](slides/StreamWave_CSuite_Content_Strategy.pptx)
-
-
-The Excel dashboard enables leadership to:
-
-- Slice performance by genre
-- Compare engagement vs retention
-n- Identify high-impact investment areas
-- Monitor churn-sensitive content
-
-
-The Excel dashboard enables leadership to:
-
-- Slice performance by genre
-- Compare engagement vs retention
-- Identify high-impact investment areas
-- Monitor churn-sensitive content
+- Churn Rate
+- Revenue at Risk
+- Customer Lifetime Value (CLV)
+- Average Monthly Charges
+- High-Value Customer Ratio
 
 ---
 
 ## 💡 Key Insights
 
-- **Drama** drives the highest views and repeat engagement
-- **Comedy** balances strong engagement with loyalty
-- **Horror** shows exceptional viewer loyalty
-- **Biography** has high completion but weak retention
-- **Sci-Fi & Action** offer scalable growth potential
+- Month-to-month customers show the highest churn rate
+- Customers with low tenure are more likely to churn
+- High-value but non-loyal customers pose the highest revenue risk
+- Service usage impacts retention significantly
 
 ---
 
 ## 🧠 Strategic Recommendations
 
-1. Increase investment in **Drama and Comedy**
-2. Develop niche sub-genres in **Sci-Fi and Action**
-3. Refresh **Documentary formats** for broader appeal
-4. Implement retention strategies for **Biography**
-5. Use genre-driven personalization to reduce churn
+1. Target **high-value, low-tenure customers** with retention offers  
+2. Incentivize **long-term contracts**  
+3. Improve onboarding experience for new customers  
+4. Use segmentation for personalized retention strategies  
+5. Monitor churn drivers continuously via dashboard  
 
 ---
 
 ## 🧰 Tools & Technologies
 
-- **Microsoft Excel** – Analysis & dashboards
-- **Power Query** – Data cleaning & transformation
-- **Excel Pivot Tables** – KPI modeling
-- **Excalidraw** – Dashboard wireframing
+- Python (Pandas, NumPy, Scikit-learn)
+- SQL (conceptual workflow)
+- Power BI (dashboard & storytelling)
+- VS Code / Jupyter Notebook
+- Git & GitHub
 
 ---
 
 ## 🏁 Conclusion
 
-This project demonstrates how Excel-based analytics can deliver **enterprise-level insights** when aligned with business strategy. By focusing on engagement quality and retention—not just views—StreamWave can maximize ROI and maintain competitive advantage.
+This project demonstrates how combining **data engineering, machine learning, and business intelligence** can create a powerful system for predicting churn and driving strategic decisions.
+
+It reflects real-world analytics workflows used in consulting, banking, and SaaS environments.
 
 ---
 
 ## 📁 GitHub Repository Structure
 
 ```text
-
 churn_prediction_project/
 │
 ├── data/
-│   ├── raw/              # messy data
-│   ├── processed/        # cleaned data
+│   ├── raw/
+│   ├── processed/
 │
 ├── notebooks/
 │   └── exploration.ipynb
@@ -308,27 +254,10 @@ churn_prediction_project/
 │   ├── data_cleaning.py
 │   ├── feature_engineering.py
 │   ├── train_model.py
-│   ├── predict.py
-│
-├── api/
-│   └── main.py
 │
 ├── dashboard/
 │   └── churn_dashboard.pbix
 │
+├── model.pkl
 ├── requirements.txt
 └── README.md
-```
-
-This structure ensures clarity, scalability, and recruiter-friendly navigation.
-
----
-
-## 👩‍💻 Author
-
-**Charles Walton**  
-Data Analyst | Business Intelligence | Media Analytics  
-📧 cwalton1335@gmail.com
-
-
-
