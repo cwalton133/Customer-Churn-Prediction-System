@@ -44,9 +44,8 @@ def clean_data(messy_data):
     )
 
     # -------------------------------
-    # 7. HANDLE "No internet service" (🔥 IMPORTANT)
+    # 7. HANDLE "No internet service"
     # -------------------------------
-
     service_cols = [
         'onlinesecurity', 'onlinebackup', 'deviceprotection',
         'techsupport', 'streamingtv', 'streamingmovies'
@@ -61,7 +60,20 @@ def clean_data(messy_data):
         df[col] = df[col].map({'Yes': 1, 'No': 0})
 
     # -------------------------------
-    # 8. Encode other binary columns (optional but recommended)
+    # 8. HANDLE "No phone service" (🔥 NEW)
+    # -------------------------------
+
+    # Create phone service indicator BEFORE encoding
+    df['has_phone'] = (df['phoneservice'] == 'Yes').astype(int)
+
+    # Fix MultipleLines column
+    df['multiplelines'] = df['multiplelines'].replace('No phone service', 'No')
+
+    # Encode MultipleLines
+    df['multiplelines'] = df['multiplelines'].map({'Yes': 1, 'No': 0})
+
+    # -------------------------------
+    # 9. Encode other binary columns
     # -------------------------------
     binary_cols = ['partner', 'dependents', 'phoneservice', 'paperlessbilling']
 
@@ -69,7 +81,7 @@ def clean_data(messy_data):
         df[col] = df[col].map({'Yes': 1, 'No': 0})
 
     # -------------------------------
-    # 9. Encode target variable
+    # 10. Encode target variable
     # -------------------------------
     df['churn'] = df['churn'].map({'Yes': 1, 'No': 0})
 
