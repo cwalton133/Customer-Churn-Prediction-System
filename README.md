@@ -173,6 +173,13 @@ The model predicts churn and identifies key drivers such as:
 #### 📸 Dashboard View 2
 ![Dashboard 2](dashboard/dashboard_2.png)
 
+
+#### 📸 Dashboard View 3
+![Dashboard 1](dashboard/dashboard_3.png)
+
+#### 📸 Dashboard View 4
+![Dashboard 2](dashboard/dashboard_4.png)
+
 ---
 
 ### Dashboard Features
@@ -266,3 +273,12 @@ churn_prediction_project/
 │
 ├── model.pkl
 └── README.md
+
+
+
+---
+-This structure ensures clarity, scalability, and recruiter-friendly navigation. 
+--- ## 👩‍💻 Author 
+**Charles Walton** 
+Data Analyst | Business Intelligence | Media Analytics 
+📧 cwalton1335@gmail.com
